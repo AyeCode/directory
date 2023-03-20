@@ -1,23 +1,22 @@
 === Directory ===
 Contributors: ayecode, stiofansisland
-Tested up to: 6.1
+Tested up to: 6.2
 Requires at least: 6.1
 Requires PHP: 7.2
-Version: 3.0.0
+Version: 3.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-BlockStrap is a very blank starter theme.
+Directory is a unique theme concept, for WordPress.org. With Directory Theme you can easily create an online portal and submit your business listings.
 
 == Description ==
-BlockStrap is a very blank starter theme.
+Directory is a unique theme concept, for WordPress.org. With Directory Theme you can easily create an online portal and submit your business listings. Directory utilises the power of the WordPress block editor, GeoDirectory and Bootstrap to be able to create a fast loading modern directory site.
 
 == Changelog ==
 
-= 0.0.11 =
-* Changes for upcoming BS5 option - CHANGED
-* Now used Bootstrap v5 Only - CHANGED
-
+= 3.0.1 =
+* Converted to a block theme - NEW
+* V3 is a new structure from v2, and will take some manual work to recreate your design, downgrade option shown after upgrade - ADDED
 
 == Copyright ==
 

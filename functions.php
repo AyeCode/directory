@@ -19,3 +19,16 @@ add_action( 'wp_enqueue_scripts', 'directory_enqueue_styles' );
 function directory_enqueue_styles() {
 	 wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 }
+
+
+/**
+ * Loads the translation files for WordPress.
+ *
+ * @since 3.0.0
+ */
+function directory_theme_setup()
+{
+	load_child_theme_textdomain( 'directory', get_stylesheet_directory() . '/languages' );
+}
+
+add_action('after_setup_theme', 'directory_theme_setup');
