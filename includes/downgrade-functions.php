@@ -42,6 +42,8 @@ function directory_theme_downgrade_notice() {
 		'directory_nonce'
 	);
 
+	$learn_more_url = 'https://docs.wpgeodirectory.com/article/729-beta-release-of-the-new-fse-directory-theme';
+
 	?>
 	<div class="notice notice-error" style="text-align: center">
 		<h1 style="font-size: 40px;font-weight: bold;text-align: center;">
@@ -55,7 +57,12 @@ function directory_theme_downgrade_notice() {
 			?>
 		</h2>
 		<p>
-			<strong><?php esc_html_e( 'Version 3 of Directory theme has changed to be a block theme, this will require manual work to recreate your current layout.', 'directory' ); ?></strong>
+			<strong>
+			<?php
+				/* translators: %1$s: Opening link tag %2$s PHP Closing link tag. */
+				echo sprintf( __( 'Version 3 of Directory theme has changed to be a block theme, this will require manual work to recreate your current layout. %1$sLearn more.%2$s', 'directory' ), "<a href='" . esc_url_raw( $learn_more_url ) . "' target='_blank'>", '</a>' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			?>
+				</strong>
 		</p>
 		<p><?php esc_html_e( 'Not ready? no problem', 'directory' ); ?><br><strong><a
 						onclick="return confirm('<?php esc_html_e( 'This will downgrade directory to the latest version 2', 'directory' ); ?>');"
