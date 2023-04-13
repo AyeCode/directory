@@ -11,7 +11,7 @@
 function directory_theme_pattern_header_default( $content ) {
 	ob_start();
 
-    $home_url = get_home_url(); /* <?php echo esc_url( $home_url ); ?> */
+	$home_url = get_home_url(); /* <?php echo esc_url( $home_url ); ?> */
 	?>
 	<!-- wp:blockstrap/blockstrap-widget-skip-links {"content":""} -->
 	[bs_skip_links text1='Skip to main content'  hash1='main'  text2=''  hash2=''  text3=''  hash3=''  text_color=''  text_justify='false'  text_align=''  text_align_md=''  text_align_lg=''  mt=''  mr=''  mb=''  ml=''  mt_md=''  mr_md=''  mb_md=''  ml_md=''  mt_lg=''  mr_lg=''  mb_lg=''  ml_lg=''  pt=''  pr=''  pb=''  pl=''  pt_md=''  pr_md=''  pb_md=''  pl_md=''  pt_lg=''  pr_lg=''  pb_lg=''  pl_lg=''  border=''  rounded=''  rounded_size=''  shadow=''  css_class='' ]
@@ -23,7 +23,8 @@ function directory_theme_pattern_header_default( $content ) {
 			<!-- /wp:blockstrap/blockstrap-widget-navbar-brand -->
 			<?php
 			echo directory_theme_get_default_menu(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			?></div></nav>[/bs_navbar]
+			?>
+			</div></nav>[/bs_navbar]
 	<!-- /wp:blockstrap/blockstrap-widget-navbar -->
 	<?php
 
