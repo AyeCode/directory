@@ -12,9 +12,8 @@
 function directory_theme_get_default_menu() {
 	ob_start();
 	?>
-    <!-- wp:blockstrap/blockstrap-widget-nav {"inside_navbar":"1","font_size":"fs-sm","ml_lg":"","rounded_size":"lg","width":"w-100"} -->
-    [bs_nav inside_navbar='1'  container=''  flex_direction=''  nav_style=''  flex_justify_content=''  flex_justify_content_md=''  flex_justify_content_lg=''  nav_fill=''  font_size='fs-sm'  font_size_custom=''  bg=''  mt=''  mr='auto'  mb=''  ml='auto'  mt_md=''  mr_md=''  mb_md=''  ml_md=''  mt_lg=''  mr_lg='0'  mb_lg=''  ml_lg=''  pt=''  pr=''  pb=''  pl=''  pt_md=''  pr_md=''  pb_md=''  pl_md=''  pt_lg=''  pr_lg=''  pb_lg=''  pl_lg=''  border=''  rounded=''  rounded_size='lg'  shadow=''  width='w-100'  css_class='' ]<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav_1" aria-label="Open menu"><span class="navbar-toggler-icon"></span></button><div class="wp-block-blockstrap-blockstrap-widget-nav collapse navbar-collapse" id="navbarNav_1"><ul class="wp-block-blockstrap-blockstrap-widget-nav navbar-nav me-auto ms-auto me-lg-0 rounded-lg w-100 fs-sm">
-
+    <!-- wp:blockstrap/blockstrap-widget-nav {"anchor":"main-nav","inside_navbar":"1","font_size":"fs-sm","ml_lg":"","rounded_size":"lg","width":"w-100"} -->
+    [bs_nav anchor='main-nav'  inside_navbar='1'  container=''  flex_direction=''  nav_style=''  flex_justify_content=''  flex_justify_content_md=''  flex_justify_content_lg=''  nav_fill=''  font_size='fs-sm'  font_size_custom=''  bg=''  mt=''  mr='auto'  mb=''  ml='auto'  mt_md=''  mr_md=''  mb_md=''  ml_md=''  mt_lg=''  mr_lg='0'  mb_lg=''  ml_lg=''  pt=''  pr=''  pb=''  pl=''  pt_md=''  pr_md=''  pb_md=''  pl_md=''  pt_lg=''  pr_lg=''  pb_lg=''  pl_lg=''  border=''  rounded=''  rounded_size='lg'  shadow=''  width='w-100'  css_class='' ]<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav_main-nav" aria-label="Open menu"><span class="navbar-toggler-icon"></span></button><div class="wp-block-blockstrap-blockstrap-widget-nav collapse navbar-collapse" id="navbarNav_main-nav"><ul class="wp-block-blockstrap-blockstrap-widget-nav navbar-nav me-auto ms-auto me-lg-0 rounded-lg w-100 fs-sm">
 			<?php
 			// Location switcher if location manager installed
 			if ( defined( 'GEODIRLOCATION_VERSION' ) ) {
@@ -94,7 +93,7 @@ function directory_theme_get_default_menu() {
 
 
 
-		</ul></div><script>jQuery("#navbarNav_1").on("show.bs.collapse", function () {jQuery("#navbarNav_1").closest(".bg-transparent-until-scroll,.bg-transparent").addClass("nav-menu-open");});jQuery("#navbarNav_1").on("hidden.bs.collapse", function () {jQuery("#navbarNav_1").closest(".bg-transparent-until-scroll,.bg-transparent").removeClass("nav-menu-open");});</script>[/bs_nav]
+        </ul></div><script>jQuery("#navbarNav_main-nav").on("show.bs.collapse", function () {jQuery("#navbarNav_main-nav").closest(".bg-transparent-until-scroll,.bg-transparent").addClass("nav-menu-open");});jQuery("#navbarNav_main-nav").on("hidden.bs.collapse", function () {jQuery("#navbarNav_main-nav").closest(".bg-transparent-until-scroll,.bg-transparent").removeClass("nav-menu-open");});</script>[/bs_nav]
 	<!-- /wp:blockstrap/blockstrap-widget-nav -->
 	<?php
 
