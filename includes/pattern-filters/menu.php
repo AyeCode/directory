@@ -92,9 +92,8 @@ function directory_theme_get_default_menu() {
 			<!-- /wp:blockstrap/blockstrap-widget-nav-item -->
 
 
-
-        </ul></div><script>jQuery("#navbarNav_main-nav").on("show.bs.collapse", function () {jQuery("#navbarNav_main-nav").closest(".bg-transparent-until-scroll,.bg-transparent").addClass("nav-menu-open");});jQuery("#navbarNav_main-nav").on("hidden.bs.collapse", function () {jQuery("#navbarNav_main-nav").closest(".bg-transparent-until-scroll,.bg-transparent").removeClass("nav-menu-open");});</script>[/bs_nav]
-	<!-- /wp:blockstrap/blockstrap-widget-nav -->
+        </ul></div><script>jQuery("#navbarNav_main-nav").on("show.bs.collapse", function () {jQuery("#navbarNav_main-nav").closest(".bg-transparent-until-scroll,.bg-transparent").addClass("nav-menu-open"); jQuery(window).trigger("scroll");});jQuery("#navbarNav_main-nav").on("hidden.bs.collapse", function () {jQuery("#navbarNav_main-nav").closest(".bg-transparent-until-scroll,.bg-transparent").removeClass("nav-menu-open"); jQuery(window).trigger("scroll");});</script>[/bs_nav]
+	    <!-- /wp:blockstrap/blockstrap-widget-nav -->
 	<?php
 
 	return ob_get_clean();
