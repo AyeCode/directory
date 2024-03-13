@@ -8,10 +8,10 @@
 function blockstrap_theme_plugin_suggestions() {
 
 	if ( isset( $_REQUEST['blockstrap_geodirectory_dismiss'] ) && check_admin_referer( 'blockstrap_geodirectory_nonce' ) ) {
-		update_option( 'directory_geodirectory_dismiss', time() );
+		function_exists( 'blockstrap_update_option' ) ? blockstrap_update_option( 'directory_geodirectory_dismiss', time() ) : update_option( 'directory_geodirectory_dismiss', time() );
 	}
 
-	$no_gd = get_option( 'directory_geodirectory_dismiss' );
+	$no_gd = function_exists( 'blockstrap_get_option' ) ? blockstrap_get_option( 'directory_geodirectory_dismiss' ) : get_option( 'directory_geodirectory_dismiss' );
 
 	// if accepted v3 then bail
 	if ( $no_gd ) {

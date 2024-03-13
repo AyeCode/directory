@@ -9,10 +9,10 @@ add_action( 'admin_notices', 'directory_theme_downgrade_notice' );
 function directory_theme_downgrade_notice() {
 
 	if ( isset( $_REQUEST['directory_v3_ok'] ) && check_admin_referer( 'directory_nonce' ) ) {
-		update_option( 'directory_theme_v3', time() );
+		function_exists( 'blockstrap_update_option' ) ? blockstrap_update_option( 'directory_theme_v3', time() ) : update_option( 'directory_theme_v3', time() );
 	}
 
-	$v3_ok = get_option( 'directory_theme_v3' );
+	$v3_ok = function_exists( 'blockstrap_get_option' ) ? blockstrap_get_option( 'directory_theme_v3' ) : get_option( 'directory_theme_v3' );
 
 	// if accepted v3 then bail
 	if ( $v3_ok ) {
