@@ -29,24 +29,11 @@ function directory_enqueue_styles() {
 function directory_theme_setup()
 {
 	load_child_theme_textdomain( 'directory', get_stylesheet_directory() . '/languages' );
-}
 
-add_action('after_setup_theme', 'directory_theme_setup');
-
-
-/**
- * Loads the Blockstrap Directory admin functionalities.
- *
- * This function checks if the user is in the admin area and then loads the necessary
- * admin files for Blockstrap School theme.
- *
- * @return void
- */
-function blockstrap_school_load_admin(){
 	if ( is_admin() ) {
 		// Theme admin stuff
 		require_once 'includes/class-blockstrap-admin-child.php';
 	}
 }
 
-add_action('after_setup_theme','blockstrap_school_load_admin');
+add_action('after_setup_theme', 'directory_theme_setup');
