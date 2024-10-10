@@ -202,6 +202,7 @@
 		"spacing": {
 			"customPadding": true,
 			"customMargin": true,
+			"blockGap": false,
 			"units": [
 				"px",
 				"em",
@@ -211,6 +212,8 @@
 			]
 		},
 		"layout": {
+			"contentSize": "100%",
+			"wideSize": "100%",
 			"units": [
 				"px",
 				"em",

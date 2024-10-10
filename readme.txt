@@ -1,9 +1,9 @@
 === Directory ===
 Contributors: ayecode, stiofansisland
-Tested up to: 6.5
+Tested up to: 6.7
 Requires at least: 6.1
 Requires PHP: 7.2
-Version: 3.0.6
+Version: 3.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,9 @@ Directory is a unique theme concept, for WordPress.org. With Directory Theme you
 Directory is a unique theme concept, for WordPress.org. With Directory Theme you can easily create an online portal and submit your business listings. Directory utilises the power of the WordPress block editor, GeoDirectory and Bootstrap to be able to create a fast loading modern directory site.
 
 == Changelog ==
+
+= 3.0.7 =
+* Templates updated for better editor performance to prevent re-render when not needed - CHANGED
 
 = 3.0.6 =
 * Changed to use parent theme helper functions for theme settings - CHANGED
