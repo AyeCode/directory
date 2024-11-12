@@ -15,12 +15,6 @@ require_once 'includes/register-patterns.php';
 // Downgrade functions
 require_once 'includes/downgrade-functions.php';
 
-add_action( 'wp_enqueue_scripts', 'directory_enqueue_styles' );
-function directory_enqueue_styles() {
-	 wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-}
-
-
 /**
  * Loads the translation files for WordPress.
  *

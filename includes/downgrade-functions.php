@@ -117,16 +117,16 @@ add_filter( 'upgrader_package_options', 'directory_theme_maybe_downgrade_v2' );
  * @return void
  */
 function directory_theme_downgrade_completed( $upgrader_object, $options ) {
-	if ( 'theme' === $options['type'] ) {
+	if ( !empty( $options['type'] ) && 'theme' === $options['type'] ) {
 		// Get the current theme version
 		$current_theme   = wp_get_theme();
 		$current_version = $current_theme->get( 'Version' );
 
 		if (
-			check_admin_referer( 'install-theme_directory' )
-			&& ! empty( $_REQUEST['theme'] )
+			! empty( $_REQUEST['theme'] )
 			&& 'directory' === $_REQUEST['theme']
 			&& ! empty( $_REQUEST['directory_downgrade'] )
+            && check_admin_referer( 'install-theme_directory' )
 		) {
 			update_option( 'template', 'directory' );
 		}
