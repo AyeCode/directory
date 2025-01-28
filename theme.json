@@ -202,7 +202,7 @@
 		"spacing": {
 			"customPadding": true,
 			"customMargin": true,
-			"blockGap": false,
+			"blockGap": true,
 			"units": [
 				"px",
 				"em",
@@ -413,8 +413,17 @@
 			"area": "header"
 		},
 		{
+			"name": "header-transparent",
+			"area": "header"
+		},
+		{
 			"name": "footer",
 			"area": "footer"
+		},
+		{
+			"name": "menu-wrapper",
+			"title": "Menu Wrapper",
+			"area": "uncategorized"
 		},
 		{
 			"name": "hero",

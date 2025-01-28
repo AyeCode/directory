@@ -24,3 +24,22 @@ function directory_theme_get_default_menu() {
 	return ob_get_clean();
 }
 add_filter( 'directory_pattern_menu_default', 'directory_theme_pattern_menu_default', 15 );
+
+
+
+function directory_pattern_menu_wrapper( $content ) {
+    ob_start();
+
+    $home_url = get_home_url(); /* <?php echo esc_url( $home_url ); ?> */
+    ?>
+    <!-- wp:blockstrap/blockstrap-widget-navbar-brand {"text":"\u003cspan class=\u0022text-primary\u0022\u003eD\u003c/span\u003eirectory","img_max_width":150,"custom_url":"/","brand_font_size":"h4","brand_font_weight":"font-weight-bold","bg_gradient":"linear-gradient(135deg,rgb(34,227,7) 0%,rgb(245,245,245) 100%)","bg_on_text":true,"mb_lg":"1","pt_lg":"0","pr_lg":"0","pb_lg":"0","rounded_size":"lg","sd_shortcode":"[bs_navbar_brand text='\u003cspan class=\u0022text-primary\u0022\u003eD\u003c/span\u003eirectory'  icon_image=''  img_max_width='150'  type='home'  custom_url='/'  text_color=''  brand_font_size='h4'  brand_font_weight='font-weight-bold'  brand_font_italic=''  text_justify='false'  text_align=''  text_align_md=''  text_align_lg=''  bg=''  bg_color='#0073aa'  bg_gradient='linear-gradient(135deg,rgb(34,227,7) 0%,rgb(245,245,245) 100%)'  bg_on_text='true'  mt=''  mr=''  mb=''  ml=''  mt_md=''  mr_md=''  mb_md=''  ml_md=''  mt_lg=''  mr_lg=''  mb_lg='1'  ml_lg=''  pt=''  pr=''  pb=''  pl=''  pt_md=''  pr_md=''  pb_md=''  pl_md=''  pt_lg='0'  pr_lg='0'  pb_lg='0'  pl_lg=''  border=''  rounded=''  rounded_size='lg'  shadow=''  css_class='' ]"} -->
+    <a class="navbar-brand d-flex align-items-center mb-1 pt-0 pe-0 pb-0 rounded-lg" href="<?php echo esc_url( $home_url ); ?>"><span class="mb-0 props.attributes.brand_font_size props.attributes.brand_font_weight props.attributes.brand_font_italic"><span class="text-primary">D</span>irectory</span></a>
+    <!-- /wp:blockstrap/blockstrap-widget-navbar-brand -->
+    <?php
+    echo directory_theme_get_default_menu(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+    ?>
+    <?php
+
+    return ob_get_clean();
+}
+add_filter( 'directory_pattern_menu_wrapper', 'directory_pattern_menu_wrapper', 15 );
