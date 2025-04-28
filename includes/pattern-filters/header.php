@@ -33,7 +33,7 @@ add_filter( 'blockstrap_pattern_header_default', 'directory_theme_pattern_header
  */
 function directory_theme_pattern_header_transparent( $content ) {
 
-	// Use the default menu and just change the settings @todo we need to find a better way to re-use the same menu
+	// Use the default menu and just change the settings
 	return str_replace(
 		array(
 			'"container":"navbar-light"',
